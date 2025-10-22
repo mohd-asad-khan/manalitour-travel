@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Manali Tour and Travels</title>
+  <link rel="stylesheet" href="style.css" />
+   <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Manali Tour and Travels</h1>
+    <nav>
+      <a href="#destinations">Destinations</a>
+      <a href="#booking">Book Now</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+      <a href="#admin">Bookings</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Discover Manali & Beyond</h2>
+    <p>Your adventure begins here.</p>
+  </section>
+
+  <section id="destinations">
+    <h2>Top Destinations</h2>
+    <div class="cards">
+      <div class="card">
+        <!-- Manali -->
+        <img src=https://images.unsplash.com/photo-1712388430474-ace0c16051e2?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=774 alt="Manali" />
+
+        <img src="https://images.unsplash.com/photo-1579689189009-874f5cac2db5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1004" alt="">
+
+
+        <h3>Manali</h3>
+        <p>Snow-capped peaks, adventure sports, and serene valleys.</p>
+      </div>
+      <div class="card">
+        <!-- Shimla -->
+         <img src=https://images.unsplash.com/photo-1609948543911-7f01ff385be5?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=770 alt="Shimla" />
+        <h3>Shimla</h3>
+        <p>Colonial charm and scenic mountain views.</p>
+      </div>
+       <div class="card">
+        <img src="https://source.unsplash.com/600x400/?ladakh,monastery" alt="Leh-Ladakh" />
+        <h3>Leh-Ladakh</h3>
+        <p>High-altitude deserts and spiritual monasteries.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="booking">
+    <h2>Book Your Trip</h2>
+    <form id="booking-form">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="tel" name="phone" placeholder="Phone (for WhatsApp)" required />
+      <input type="email" name="email" placeholder="Email Address" required />
+      <select name="destination" required>
+        <option value="">Select Destination</option>
+        <option value="Manali">Manali</option>
+        <option value="Shimla">Shimla</option>
+        <option value="Leh-Ladakh">Leh-Ladakh</option>
+      </select>
+      <input type="date" name="date" required />
+      <select name="guests" required>
+        <option value="">Guests</option>
+        <option>1</option>
+        <option>2</option>
+        <option>3-4</option>
+        <option>5+</option>
+      </select>
+      
+      <textarea name="notes" placeholder="Special requests (optional)"></textarea>
+      <button type="submit">Book Now</button>
+      <button id="pay-button" type="button">Pay Deposit ₹1000 for pre booking</button>
+      <p class="hint">On submit: we’ll message you on WhatsApp and save your booking locally for export.</p>
+    </form>
+  </section>
+
+  <section id="testimonials">
+    <h2>What Our Travelers Say</h2>
+    <blockquote>
+      “Manali Tour and Travels made our trip unforgettable. Highly recommend!” – Priya & Arjun
+    </blockquote>
+    <blockquote>
+      “Smooth booking and amazing service. Will travel again!” – Rohan M.
+    </blockquote>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+      <p class="hint">On submit: opens WhatsApp chat and saves locally.</p>
+    </form>
+  </section>
+
+  <section id="admin">
+    <h2>Bookings dashboard (local)</h2>
+    <div class="admin-actions">
+      <button id="export-bookings">Export bookings CSV</button>
+      <button id="export-messages">Export messages CSV</button>
+      <button id="clear-data">Clear all local data</button>
+    </div>
+    <div class="tables">
+      <div>
+        <h3>Bookings</h3>
+        <table id="bookings-table">
+          <thead>
+            <tr>
+              <th>Date/time</th><th>Name</th><th>Phone</th><th>Email</th><th>Destination</th><th>Trip date</th><th>Guests</th><th>Notes</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+      <div>
+        <h3>Messages</h3>
+        <table id="messages-table">
+          <thead>
+            <tr>
+              <th>Date/time</th><th>Name</th><th>Email</th><th>Message</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Manali Tour and Travels. All rights reserved.</p>
+    <a id="whatsapp-fab" href="#" aria-label="WhatsApp chat">Chat on WhatsApp</a>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
